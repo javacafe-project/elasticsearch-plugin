@@ -11,10 +11,10 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<elasticsearch.version>6.4.0</elasticsearch.version>
-		<lucene.version>7.4.0</lucene.version>
-<!-- 		<elasticsearch.version>6.2.2</elasticsearch.version> -->
-<!-- 		<lucene.version>7.2.1</lucene.version> -->
+<!-- 		<elasticsearch.version>6.4.0</elasticsearch.version> -->
+<!-- 		<lucene.version>7.4.0</lucene.version> -->
+		<elasticsearch.version>6.2.2</elasticsearch.version>
+		<lucene.version>7.2.1</lucene.version>
 	</properties>
 
 

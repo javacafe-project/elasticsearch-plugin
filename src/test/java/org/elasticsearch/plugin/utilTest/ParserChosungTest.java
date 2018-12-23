@@ -19,5 +19,18 @@ public class ParserChosungTest {
     }
     
 
+    @Test
+    public void chosungTest2() {
+        String token = "삼성전자";
+        KoreanChosungParser parser = new KoreanChosungParser();
+        String result = parser.parse(token);
+
+        System.out.println(result);
+        assertEquals("ㅅㅅㅈㅈ", result);
+    }
+    
+
+    
+    
     
 }

@@ -22,6 +22,18 @@ public class ConverterE2KTest {
 
     @Test
     public void test2() {
+        String token = "tkatjdwjswk";
+        
+        EngToKorConverter convert = new EngToKorConverter();
+        String result = convert.convert(token);
+        
+        System.out.println(result);
+        assertEquals("삼성전자", result);
+    }
+
+   
+    @Test
+    public void test3() {
         String token = "gksrmf";
         
         EngToKorConverter convert = new EngToKorConverter();
@@ -32,16 +44,6 @@ public class ConverterE2KTest {
     }
     
     
-    @Test
-    public void test3() {
-        String token = "tkatjdwjswk";
-        
-        EngToKorConverter convert = new EngToKorConverter();
-        String result = convert.convert(token);
-        
-        System.out.println(result);
-        assertEquals("삼성전자", result);
-    }
 
     
     

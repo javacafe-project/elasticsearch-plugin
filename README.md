@@ -1,7 +1,5 @@
 # elasticsearch-plugin
 자바카페 Elasticsearch 플러그인
-# elastic-book
-엘라스틱서치 샘플 예제
 
 [elasticsearch-plugin](https://github.com/javacafe-project/elasticsearch-plugin)은 사용자가 한글을 검색하기 쉽게 만들어진 플러그인 입니다.
 
@@ -10,6 +8,10 @@
 >[6.6.0](https://github.com/javacafe-project/elasticsearch-plugin/releases/tag/v6.6.0)
 >
 >[6.5.4](https://github.com/javacafe-project/elasticsearch-plugin/releases/tag/v6.5.4)
+
+# 설치방법
+>~~~~
+>
 
 # 제공기능
 

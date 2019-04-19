@@ -44,6 +44,16 @@ public class ConverterE2KTest {
     }
     
     
+    @Test
+    public void test4() {
+        String token = "gksrmf1";
+        
+        EngToKorConverter convert = new EngToKorConverter();
+        String result = convert.convert(token);
+        
+        System.out.println(result);
+        assertEquals("한글1", result);
+    }
 
     
     

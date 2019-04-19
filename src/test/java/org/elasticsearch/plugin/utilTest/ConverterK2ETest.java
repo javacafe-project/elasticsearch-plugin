@@ -56,5 +56,28 @@ public class ConverterK2ETest {
         assertEquals("samsung", result);
     }
     
+
+    @Test
+    public void test5() {
+        String token = "ㄴ므녀ㅜㅎ1";
+        
+        KorToEngConverter convert = new KorToEngConverter();
+        String result = convert.convert(token);
+        
+        System.out.println(result);
+        assertEquals("samsung1", result);
+    }
     
+    
+    @Test
+    public void test6() {
+        String token = "신혼여행(身魂旅行)";
+        
+        KorToEngConverter convert = new KorToEngConverter();
+        String result = convert.convert(token);
+        
+        System.out.println(result);
+        assertEquals("samsung1", result);
+    }
+
 }

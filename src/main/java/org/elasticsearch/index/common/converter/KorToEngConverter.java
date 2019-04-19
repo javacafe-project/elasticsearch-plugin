@@ -32,40 +32,45 @@ public class KorToEngConverter {
                 sb.append(word.substring(index, index + 1));
                 index++;
             }
-
-            int init = word.charAt(index);
-            int initUnicode = init - JamoUtil.START_KOREA_UNICODE;
-
-            if (initUnicode > 0) {
-                /**
-                 * 1글자로 조합형 한글이 들어올 경우 처리
-                 */              
-                int cho  = initUnicode / 21 / 28;   // 0 ~ 18
-                String strCho = getSameEngChar(CodeType.CHOSUNG, cho);
-                if (StringUtils.isNotEmpty(strCho)) {
-                    sb.append(strCho);
-                }
-                
-
-                int jung = initUnicode / 28 % 21;   // 0 ~ 20
-                String strJung = getSameEngChar(CodeType.JUNGSUNG, jung);
-                if (StringUtils.isNotEmpty(strJung)) {
-                    sb.append(strJung);
-                }
-                
-                int jong = initUnicode % 28;        // 0 ~ 27
-                String strJong = getSameEngChar(CodeType.JONGSUNG, jong);
-                if (StringUtils.isNotEmpty(strJong)) {
-                    sb.append(strJong);
-                }
-
-            } else {
-                /**
-                 * 1글자로 자모가 들어올 경우 처리
-                 */
-                String subStr = String.valueOf((char) init);
-                sb.append(getSameEngCharForJamo(subStr, 0));
+            if (index >= word.length()) {
+            	break;
             }
+
+            try {
+                int init = word.charAt(index);
+                int initUnicode = init - JamoUtil.START_KOREA_UNICODE;
+
+                if (initUnicode > 0) {
+                    /**
+                     * 1글자로 조합형 한글이 들어올 경우 처리
+                     */              
+                    int cho  = initUnicode / 21 / 28;   // 0 ~ 18
+                    String strCho = getSameEngChar(CodeType.CHOSUNG, cho);
+                    if (StringUtils.isNotEmpty(strCho)) {
+                        sb.append(strCho);
+                    }
+                    
+
+                    int jung = initUnicode / 28 % 21;   // 0 ~ 20
+                    String strJung = getSameEngChar(CodeType.JUNGSUNG, jung);
+                    if (StringUtils.isNotEmpty(strJung)) {
+                        sb.append(strJung);
+                    }
+                    
+                    int jong = initUnicode % 28;        // 0 ~ 27
+                    String strJong = getSameEngChar(CodeType.JONGSUNG, jong);
+                    if (StringUtils.isNotEmpty(strJong)) {
+                        sb.append(strJong);
+                    }
+
+                } else {
+                    /**
+                     * 1글자로 자모가 들어올 경우 처리
+                     */
+                    String subStr = String.valueOf((char) init);
+                    sb.append(getSameEngCharForJamo(subStr, 0));
+                }
+            } catch(Exception e) {}
         }
 
         return sb.toString();

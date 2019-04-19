@@ -32,24 +32,30 @@ public class EngToKorConverter {
                 sb.append(word.substring(index, index + 1));
                 index++;
             }
+            if (index >= word.length()) {
+            	break;
+            }
             
-            // 초성 정보를 구한다.
-            Map<String, Integer> mChoSung = KeyboardUtil.getInfoForChoSung(index, word);
-            int cho = mChoSung.get("code");
-            index = mChoSung.get("idx");
+            try {
+                // 초성 정보를 구한다.
+                Map<String, Integer> mChoSung = KeyboardUtil.getInfoForChoSung(index, word);
+                int cho = mChoSung.get("code");
+                index = mChoSung.get("idx");
 
-            // 중성 정보를 구한다.
-            Map<String, Integer> mJungSung = KeyboardUtil.getInfoForJungSung(index, word);
-            int jung = mJungSung.get("code");
-            index = mJungSung.get("idx");
+                // 중성 정보를 구한다.
+                Map<String, Integer> mJungSung = KeyboardUtil.getInfoForJungSung(index, word);
+                int jung = mJungSung.get("code");
+                index = mJungSung.get("idx");
 
-            // 종성 정보를 구한다.
-            Map<String, Integer> mJongSung = KeyboardUtil.getInfoForJongSung(index, word);
-            int jong = mJongSung.get("code");
-            index = mJongSung.get("idx");
-                        
-            // 한글 유니코드를 생성한다.
-            sb.append((char) (JamoUtil.START_KOREA_UNICODE + cho + jung + jong));
+                // 종성 정보를 구한다.
+                Map<String, Integer> mJongSung = KeyboardUtil.getInfoForJongSung(index, word);
+                int jong = mJongSung.get("code");
+                index = mJongSung.get("idx");
+                            
+                // 한글 유니코드를 생성한다.
+                sb.append((char) (JamoUtil.START_KOREA_UNICODE + cho + jung + jong));
+                
+            } catch(Exception e) {}
         }
         
         return sb.toString();

@@ -5,6 +5,14 @@
 
 > 링크 다운로드
 >
+>[7.0.0](https://github.com/javacafe-project/elasticsearch-plugin/releases/tag/v7.0.0)
+>
+>[6.7.0](https://github.com/javacafe-project/elasticsearch-plugin/releases/tag/v6.7.0)
+>
+>[6.6.2](https://github.com/javacafe-project/elasticsearch-plugin/releases/tag/v6.6.2)
+>
+>[6.6.1](https://github.com/javacafe-project/elasticsearch-plugin/releases/tag/v6.6.1)
+>
 >[6.6.0](https://github.com/javacafe-project/elasticsearch-plugin/releases/tag/v6.6.0)
 >
 >[6.5.4](https://github.com/javacafe-project/elasticsearch-plugin/releases/tag/v6.5.4)

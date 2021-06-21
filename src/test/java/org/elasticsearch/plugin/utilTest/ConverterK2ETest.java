@@ -77,7 +77,7 @@ public class ConverterK2ETest {
         String result = convert.convert(token);
         
         System.out.println(result);
-        assertEquals("samsung1", result);
+        assertEquals("tlsghsdugod()", result);
     }
 
 }

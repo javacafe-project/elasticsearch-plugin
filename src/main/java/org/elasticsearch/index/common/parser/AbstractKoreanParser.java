@@ -30,7 +30,7 @@ public abstract class AbstractKoreanParser {
         for(char ch : arrCh) {
             
             // 처리 할 char의 유니코드 인덱스를 구한다.
-            char unicodeIndex = (char)(ch - JamoUtil.START_KOREA_UNICODE);
+            int unicodeIndex = ch - JamoUtil.START_KOREA_UNICODE;
 
             // 한글 유니코드 범위 : 0xAC00 ~ 0xD7AF (11184개)
             // 한글 유니코드인지 검사한다.            
